@@ -3,10 +3,8 @@
 !!!! as first order and second order growth factor of matter density
 !!!! fluctuations stored in tables for input of RAMSES and MPGRAFIC
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!! Before running the code create a folder OUTPUT where the tables
-!!!! will be stored
 !!!! -----------------------------------------------------------------
-!!!! Author: Pier-Stefano Corasaniti
+!!!! Developper: Pier-Stefano Corasaniti
 !!!! Version 2: f90 (overrun previous f77 version)
 !!!! Version 3: includes D_plus_second_order calculation
 !!!! Version 4: increases accuracy of the calculation of the different

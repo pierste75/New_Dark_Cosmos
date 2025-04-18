@@ -87,14 +87,14 @@ CONTAINS
     IMPLICIT NONE
     REAL(8) :: Conformal_time, z
     REAL(8) :: clever
-    Conformal_time = clever(z,1.d+14,inv_hubblez)
+    Conformal_time = clever(z,1.d+20,inv_hubblez)
   END FUNCTION Conformal_time
 
   FUNCTION Cosmic_time(z)
     IMPLICIT NONE
     REAL(8) :: Cosmic_time, z
     REAL(8) :: clever
-    Cosmic_time = clever(z,1.d+14,inv_hubblez_on_oneplusz)
+    Cosmic_time = clever(z,1.d+20,inv_hubblez_on_oneplusz)
   END FUNCTION Cosmic_time
 
   FUNCTION dsuperconf_time(z)
@@ -109,7 +109,7 @@ CONTAINS
   FUNCTION Superconf_time(z)
     IMPLICIT NONE
     REAL(8) :: Superconf_time, z, clever
-    Superconf_time=clever(z,1.d+14,dsuperconf_time)
+    Superconf_time=clever(z,1.d+20,dsuperconf_time)
   END FUNCTION Superconf_time
 
   SUBROUTINE FDERIVS(n,x,y,dydx)
@@ -279,9 +279,10 @@ END PROGRAM NEW_DARK_COSMOS
 FUNCTION CLEVER(A,B,F)
   IMPLICIT NONE
   REAL(8) :: CLEVER
-  integer :: LORR(200), IFLAG, LVL
-  real(8) :: FV(5),FIT(200),F2T(200),F3T(200),DAT(200)
-  real(8) ::  ARESTT(200),ESTT(200),EPST(200),PSUM(200), F
+  integer, parameter :: N = 800
+  integer :: LORR(N), IFLAG, LVL
+  real(8) :: FV(5),FIT(N),F2T(N),F3T(N),DAT(N)
+  real(8) ::  ARESTT(N),ESTT(N),EPST(200),PSUM(N), F
   real(8) :: U, ACC, FOURU, EPS, ERROR, ALPHA, DA, AREA, AREST, KOUNT
   real(8) :: WT, EST, DX, ESTL, ESTR, SUM
   real(8) :: ARESTL, ARESTR, DIFF, A, B, S, T,G

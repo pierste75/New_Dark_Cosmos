@@ -282,7 +282,7 @@ FUNCTION CLEVER(A,B,F)
   integer, parameter :: N = 800
   integer :: LORR(N), IFLAG, LVL
   real(8) :: FV(5),FIT(N),F2T(N),F3T(N),DAT(N)
-  real(8) ::  ARESTT(N),ESTT(N),EPST(200),PSUM(N), F
+  real(8) ::  ARESTT(N),ESTT(N),EPST(N),PSUM(N), F
   real(8) :: U, ACC, FOURU, EPS, ERROR, ALPHA, DA, AREA, AREST, KOUNT
   real(8) :: WT, EST, DX, ESTL, ESTR, SUM
   real(8) :: ARESTL, ARESTR, DIFF, A, B, S, T,G

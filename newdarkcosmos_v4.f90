@@ -54,7 +54,7 @@ CONTAINS
     IMPLICIT NONE
     REAL(8) :: f_DE, z, a
     a = 1.d0/(1.d0+z)
-    f_DE = exp(3.*wa*(1.d0-a))*(1.d0+z)**(3.d0*(1.d0+w0+wa))
+    f_DE = exp(3.*wa*(1.d0-a))*(1.d0+z)**(-3.d0*(1.d0+w0+wa))
   END FUNCTION f_DE
 
 
